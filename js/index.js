@@ -20,7 +20,7 @@ $( document ).delegate("#magazine", "pageinit", function() {
  * get data 
  */
  function get_data(){
- 	var url = 'http://w3.web_apps.dev/magazine-service/mobiles/magazine_paid.json';      
+ 	var url = 'http://magazine.w3-app.com/mobiles/magazine_paid.json';      
     $.ajax({
         url			: url ,
 		crossDomain : true,
@@ -58,7 +58,7 @@ function show_contents(){
 
 // create home page
 function create_covers(data){
-	$("#magazine-cover-page").html('<img src="http://w3.web_apps.dev/magazine-service/img/magazine_covers/mobiles/'+data.id+'.png" class="ri"/>');
+	$("#magazine-cover-page").html('<img src="http://magazine.w3-app.com/img/magazine_covers/mobiles/'+data.id+'.png" class="ri"/>');
 }
 //create contents
 function create_contents(data){
