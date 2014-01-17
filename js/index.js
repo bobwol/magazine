@@ -91,6 +91,13 @@ function goto_contents(data){
 	$.mobile.navigate(new_url);
 }
 
+function goto_home(){
+	var base_url = jQuery.mobile.path.parseLocation();
+	show_contents();
+	
+	$.mobile.navigate(base_url.domain+base_url.pathname+'#magazine-cover-page');
+}
+
 //create reload if internet not found
 
 function refresh_page(){
