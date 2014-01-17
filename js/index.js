@@ -1,13 +1,7 @@
 $( document ).delegate("#magazine", "pageinit", function() {
-	var internet_status = window.navigator.onLine;
-	if(internet_status == true){
 		$("#magazine-context").hide();
 		$("#internet").hide();
  		get_data();
-	 } else {
-	 	$("#magazine-context").hide();
-		$("#internet").show();
-	 }
 });
 
 
@@ -25,13 +19,20 @@ $( document ).delegate("#magazine", "pageinit", function() {
         url			: url ,
 		crossDomain : true,
         dataType	: "jsonp",
-		beforeSend: function() { $('body').addClass('ui-loading'); },
+		beforeSend: function() {  $('body').addClass('ui-loading'); },
         success	: function(msg){
 			create_covers(msg.Magazine);
 			create_contents(msg.Content);
 			create_context(msg.Content);
 			$('body').removeClass('ui-loading');
-		}
+		},
+		error  : function(msg){
+			$('body').removeClass('ui-loading');
+			$("#magazine-context").hide();
+			$("#internet").show();
+		},
+       timeout : 10000
+		
     });         
  }
 
@@ -65,7 +66,7 @@ function create_contents(data){
 	$('#magazine-content').html('');
 	$.each(data,function(){
 		$('#magazine-content').append(
-			'<div class="content-wrapper"><div class="title-wrapper" id="content_'+this.id+'"><h1>'+this.title+'</h1></div><div class="content-description">'+this.description+'</div></div>'
+			'<div class="content-wrapper content_id_'+this.id+'"><div class="title-wrapper" id="content_'+this.id+'"><h1>'+this.title+'</h1></div><div class="content-description">'+this.description+'</div></div>'
 		);
 	});
 }
@@ -87,12 +88,7 @@ function goto_contents(data){
 	var new_url = base_url.domain+base_url.pathname+'#'+data;
 	//alert(data);
 	show_contents();
-	
-	
 	$.mobile.navigate(new_url);
-	
-	
-	
 }
 
 //create reload if internet not found
