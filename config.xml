@@ -5,6 +5,7 @@
         versionCode = "10" 
         version     = "1.0.0" >
 
+
     <!-- versionCode is optional and Android only -->
 
     <name>Magazine App</name>
