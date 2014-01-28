@@ -53,6 +53,10 @@ function show_contents(){
 	$("#magazine-content").show();
 }
 
+function close_app(){
+	navigator.app.exitApp();
+}
+
 /*
  * pages
  */
