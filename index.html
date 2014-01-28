@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <title>Magazine :: w3-app</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/jquery.mobile-1.4.0.min.css" rel="stylesheet" type="text/css"/>
@@ -9,45 +9,43 @@
     <script type="text/javascript" src="js/jquery.js" ></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     
 </head>
 
 <body>
-	<!-- home page -->
-	<div data-role="page" id="magazine">
-		<div data-role="content">
-		<div class="my_content" id="internet">
-			No Internet found, Click to <br>
-			<a href="#" onclick="refresh_page()" data-role="button" data-inline = "true" data-theme="e" data-icon="refresh" data-iconpos="top">Reload</a>
-		</div>
-		<!--home page content -->
-		<div id="magazine-context" class="my_content">
-			<ul data-role="listview" data-inset="true" id="context-ul">
-				
-			</ul>
-		</div>
-		<div id="magazine-cover-page"  class="my_content">
-			
-		</div>
-		<div id="magazine-content"  class="my_content">
-			
-		</div>
-		
+    <!-- home page -->
+    <div data-role="page" id="magazine">
+        <div data-role="content">
+            <div class="my_content" id="internet">
+                No Internet found, Click to <br>
+                <a href="#" onclick="refresh_page()" data-role="button" data-inline = "true" data-theme="e" data-icon="refresh" data-iconpos="top">Reload</a>
+            </div>
+            <!--home page content -->
+            <div id="magazine-context" class="my_content">
+                <ul data-role="listview" data-inset="true" id="context-ul">
+                        
+                </ul>
+            </div>
+            <div id="magazine-cover-page" class="my_content">
+                    
+            </div>
+            <div id="magazine-content" class="my_content">
+                    
+            </div>
+        </div>
+            
         <div data-role="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false">
-        	<div data-role="navbar" >
+                <div data-role="navbar" >
                 <ul>
                     <li>
-                    	<a href="#" onclick="goto_home()" data-transition="flip" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home ui-btn-active">Home</a></li>
+                            <a href="#" onclick="goto_home()" data-transition="flip" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home ui-btn-active">Home</a></li>
                     <li>
-                    	<a href="#" onclick="show_contexts()" data-transition="flip" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-grid">Index</a>
+                            <a href="#" onclick="show_contexts()" data-transition="flip" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-grid">Index</a>
                     </li>
                 </ul>
             </div><!-- /navbar -->
         </div>
-    </div>
-    </div>
-    
-    
+	</div>
 </body>
 </html>
