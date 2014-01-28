@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.phonegap.example"
+        id          = "com.w3-app.gyanshikha"
         versionCode = "10" 
         version     = "1.0.0" >
 
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Magazine App</name>
+    <name>\u099c\u09cd\u099e\u09be\u09a8\u09b6\u09bf\u0996\u09be</name>
 
     <description>
         Provide magazine service from web layer
@@ -29,22 +29,22 @@
     <preference name="permissions" value="none"/>
     <feature name="http://api.phonegap.com/1.0/network"/>
 
-	<!-- icons 
+	
 	<icon src="icon.png" />
-	<!--Android only 
-	<icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
-	<icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
-	<icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
-	<icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+	
+	<icon src="images/icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+	<icon src="images/icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+	<icon src="images/icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+	<icon src="images/icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
     
-	<!-- Splash screen 
+	
 	<gap:splash src="splash.png" />
-	<!--Android only 
-	<gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
-	<gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
-	<gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
-	<gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
-	-->
+	
+	<gap:splash src="images/splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+	<gap:splash src="images/splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+	<gap:splash src="images/splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+	<gap:splash src="images/splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+	
 	
 
 </widget>
