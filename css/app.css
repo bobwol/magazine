@@ -31,6 +31,10 @@ img.ri
 h1{
 	font-size: 1.2em;
 }
+.clearfix{
+	clear: both;
+	height: 1px;
+}
 
 #internet{
 	text-align: center;

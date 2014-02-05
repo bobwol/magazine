@@ -14,7 +14,7 @@ $( document ).delegate("#magazine", "pageinit", function() {
  * get data 
  */
  function get_data(){
- 	var url = 'http://magazine.w3-app.com/mobiles/magazine_paid.json';      
+ 	var url = 'http://ns.dev/magazine-service/mobiles/magazine_paid.json';      
     $.ajax({
         url			: url ,
 		crossDomain : true,
@@ -70,7 +70,7 @@ function create_contents(data){
 	$('#magazine-content').html('');
 	$.each(data,function(){
 		$('#magazine-content').append(
-			'<div class="content-wrapper content_id_'+this.id+'"><div class="title-wrapper" id="content_'+this.id+'"><h1>'+this.title+'</h1></div><div class="content-description">'+this.description+'</div></div>'
+			'<div class="content-wrapper content_id_'+this.id+'"><div class="title-wrapper" id="content_'+this.id+'"><h1>'+this.title+'</h1></div><div class="content-description">'+this.description+'<div class="clearfix"></div></div></div>'
 		);
 	});
 }
