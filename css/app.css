@@ -5,6 +5,7 @@ img.ri
 
 @media screen and (orientation: portrait) {
   img.ri { max-width: 99%; }
+  img.ri { min-height: 99%; }
 }
 
 @media screen and (orientation: landscape) {
@@ -23,6 +24,7 @@ img.ri
 .title-wrapper{
 	background: #ccc;
 	margin-bottom: 10px;
+	padding :0px 5px;
 }
 
 .content-description{
@@ -37,5 +39,12 @@ h1{
 }
 
 #internet{
+	text-align: center;
+}
+
+.content-bottom-margin{
+	height: 40px;
+}
+.text-center{
 	text-align: center;
 }
