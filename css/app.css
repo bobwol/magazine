@@ -16,7 +16,7 @@ img.ri
 .title-wrapper{
 	display:block;
 	border-bottom: 1px solid #ED1C24;
-	padding : 0px 5px;
+	padding : 5px 5px;
 }
 .title-wrapper h1{
 	padding :0px;
@@ -24,7 +24,7 @@ img.ri
 	color: #22B24C;
 }
 .content-description{
-	padding: 2px 5px;
+	padding: 5px 5px;
 }
 .content-description p{
 	padding :0px;
@@ -42,4 +42,21 @@ h1{
 	text-align: center;
 }
 
+.bottom-space{
+	clear:both;
+	height: 30px;
+}
+.loading-content{
+	margin-top : 50%;
+}
+.text-center{
+	text-align: center;
+}
+.error-text{
+	color:#ED1C24;
+}
+
+#logo{
+	max-height: 26px !important;
+}
 

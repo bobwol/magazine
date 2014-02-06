@@ -14,7 +14,27 @@
 </head>
 
 <body>
-    
+	
+	<div data-role="page" id="loading">
+		<header data-role="header" data-theme="b"><h1><img src="images/logo.png" id="logo"/></h1></header>
+		<div data-role="content">
+			<div class="loading-content text-center">
+				<img src="css/images/ajax-loader.gif"/><br>
+				Loading 
+			</div>
+			
+		</div>
+	</div>
+	
+	<div data-role="page" id="error">
+		<header data-role="header" data-theme="b"><h1><img src="images/logo.png" id="logo"/></h1></header>
+		<div data-role="content ">
+			<div class='loading-content text-center'>
+				<i class="error-text">Network Error</i><br>
+				<a href="#" onclick="get_data()" data-role="button" data-inline="true" data-theme="b">Try again</a>
+			</div>
+		</div>
+	</div>
             
         
 	
