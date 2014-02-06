@@ -12,23 +12,23 @@ img.ri
   img.ri { max-height: 99%; }
 }
 
-.my_content{
-	margin: 0px auto;
-	max-width: 95%;
-}
-.content-wrapper{
-	
-	border-radius: 3px;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.9);
-}
-.title-wrapper{
-	background: #ccc;
-	margin-bottom: 10px;
-	padding :0px 5px;
-}
 
+.title-wrapper{
+	display:block;
+	border-bottom: 1px solid #ED1C24;
+	padding : 0px 5px;
+}
+.title-wrapper h1{
+	padding :0px;
+	margin: 0px;
+	color: #22B24C;
+}
 .content-description{
-	padding: 0px 10px 5px;
+	padding: 2px 5px;
+}
+.content-description p{
+	padding :0px;
+	margin: px;
 }
 h1{
 	font-size: 1.2em;
@@ -42,9 +42,4 @@ h1{
 	text-align: center;
 }
 
-.content-bottom-margin{
-	height: 40px;
-}
-.text-center{
-	text-align: center;
-}
+

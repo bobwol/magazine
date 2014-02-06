@@ -26,7 +26,7 @@
     <access origin="http://magazine.w3-app.com" subdomains="true" />
     
     <!-- Permissions -->
-    <preference name="permissions" value="none"/>
+
     <feature name="http://api.phonegap.com/1.0/network"/>
 
 	
