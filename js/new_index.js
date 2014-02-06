@@ -13,7 +13,7 @@ $(document).on('mobileinit',function(){
  * get data 
  */
  function get_data(){
- 	var url = 'http://ns.dev/magazine-service/mobiles/magazine_paid.json';      
+ 	var url = 'http://magazine.w3-app.com/mobiles/magazine_paid.json';      
     $.ajax({
         url			: url ,
 		crossDomain : true,
@@ -44,7 +44,7 @@ function create_home(data){
 	var d_height = $(window).height();
 	var h_height = $('header').height();
 	var menu = menus();
-	var home_data = '<div data-role="page" id="home">'+create_header()+'<div data-role="content" class="home-content"><img src="http://ns.dev/magazine-service/img/magazine_covers/mobiles/'+data.id+'.png" class="home-baner ri"/></div>'+menu+'</div>';
+	var home_data = '<div data-role="page" id="home">'+create_header()+'<div data-role="content" class="home-content"><img src="http://magazine.w3-app.com/img/magazine_covers/mobiles/'+data.id+'.png" class="home-baner ri"/></div>'+menu+'</div>';
 	$.mobile.pageContainer.append(home_data);
 	
 	$('.home-baner').css({'min-width':d_width,'min-height': d_height-90});
