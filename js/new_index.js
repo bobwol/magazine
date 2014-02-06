@@ -25,6 +25,7 @@ $(document).on('mobileinit',function(){
 			create_context(msg.Content);
 			create_magazine(msg.Content);
 			$('body').removeClass('ui-loading');
+			$('img').addClass('ri');
 			$.mobile.changePage('#home');
 		},
 		error  : function(msg){
