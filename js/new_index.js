@@ -58,10 +58,10 @@ function create_magazine(data){
 		var top_add = '';
 		var bottom_add = '';
 		if(this.top_ad != 'none'){
-			top_add = '<div class="text-center"><img src="http://ns.dev/magazine-service/img/ads/'+this.top_ad+'" class="ri" /></div>';
+			top_add = '<div class="text-center"><img src="http://magazine.w3-app.com/img/ads/'+this.top_ad+'" class="ri" /></div>';
 		}
 		if(this.bottom_ad != 'none'){
-			bottom_add = '<div class="text-center"><img src="http://ns.dev/magazine-service/img/ads/'+this.bottom_ad+'" class="ri" /></div>';
+			bottom_add = '<div class="text-center"><img src="http://magazine.w3-app.com/img/ads/'+this.bottom_ad+'" class="ri" /></div>';
 		}
 		var content_data = '<div data-role="page" id="page_'+this.id+'">'+create_header('page_header')+'<div data-role="content"><div class="content-wrapper "><div class="title-wrapper" ><h1>'+this.title+'</h1></div><div class="content-description">'+top_add+this.description+'<div class="clearfix"></div>'+bottom_add+'</div><div class="clearfix"></div></div></div>'+menu+'</div>'
 		$.mobile.pageContainer.append(content_data);
