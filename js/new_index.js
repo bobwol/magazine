@@ -1,15 +1,11 @@
 $(document).on('mobileinit',function(){
 	get_data();
-	/*
-	$( ".home-content" ).on( "swipeleft", function(){
-		
-		$.mobile.changePage('#context',{transition:"fade"});
-	} );
-	$( ".home-content" ).on( "swiperight", function(){
-		$.mobile.changePage('#context',{transition:"fade"});
-	} );
-	*/
 });
+
+$(document).on( "orientationchange", function( event ) {
+	//alert('test');
+});
+
 
 /*
  * get data 
@@ -26,9 +22,9 @@ $(document).on('mobileinit',function(){
 			create_home(msg.Magazine);
 			create_context(msg.Content);
 			create_magazine(msg.Content);
-			$('body').removeClass('ui-loading');
-			$('img').addClass('ri');
-			$('#logo').removeClass('ri');
+			//processing responsive image
+			$('.content-description img').addClass('ri');
+			ui_content();
 			$.mobile.changePage('#home');
 		},
 		error  : function(msg){
@@ -48,10 +44,10 @@ function create_home(data){
 	var d_height = $(window).height();
 	var h_height = $('header').height();
 	var menu = menus();
-	var home_data = '<div data-role="page" id="home">'+create_header()+'<div data-role="content" class="home-content"><img src="http://magazine.w3-app.com/img/magazine_covers/mobiles/'+data.id+'.png" class="home-baner ri"/></div>'+menu+'</div>';
+	var home_data = '<div data-role="page" id="home">'+create_header()+'<div data-role="content" class="home-content my_content"><img src="http://magazine.w3-app.com/img/magazine_covers/mobiles/'+data.id+'.png" class="home-baner ri"/></div>'+menu+'</div>';
 	$.mobile.pageContainer.append(home_data);
 	
-	$('.home-baner').css({'min-width':d_width,'min-height': d_height-90});
+	$('.home-baner').css({'min-width':d_width,'min-height': d_height-87});
 }
 /*
  * create pages
@@ -67,7 +63,7 @@ function create_magazine(data){
 		if(this.bottom_ad != 'none'){
 			bottom_add = '<div class="text-center"><img src="http://magazine.w3-app.com/img/ads/'+this.bottom_ad+'" class="ri" /></div>';
 		}
-		var content_data = '<div data-role="page" id="page_'+this.id+'">'+create_header('page_header')+'<div data-role="content"><div class="content-wrapper "><div class="title-wrapper" ><h1>'+this.title+'</h1></div><div class="content-description">'+top_add+this.description+'<div class="clearfix"></div>'+bottom_add+'</div><div class="clearfix"></div></div><div class="bottom-space"> </div></div>'+menu+'</div>'
+		var content_data = '<div data-role="page" id="page_'+this.id+'">'+create_header('page_header')+'<div data-role="content" class="my_content"><div class="content-wrapper "><div class="title-wrapper" ><h1>'+this.title+'</h1></div><div class="content-description">'+top_add+this.description+'<div class="clearfix"></div>'+bottom_add+'</div><div class="clearfix"></div></div><div class="bottom-space"> </div></div>'+menu+'</div>'
 		$.mobile.pageContainer.append(content_data);
 	});
 }
@@ -82,7 +78,7 @@ function create_context(data){
 	$.each(data,function(){
 		context_data += '<li><a href="#page_'+this.id+'" data-transition="slide">'+this.title+'</a></li>'
 	});
-	var content_data = '<div id="context" data-role="page">'+create_header()+'<div data-role="content"><ul data-role="listview" data-inset="true" id="context-ul">'+context_data+'</ul><div class="bottom-space"> </div></div>'+menu+'<div/>'
+	var content_data = '<div id="context" data-role="page">'+create_header()+'<div data-role="content" class="my_content"><ul data-role="listview" data-inset="true" id="context-ul">'+context_data+'</ul><div class="bottom-space"> </div></div>'+menu+'<div/>'
 	$.mobile.pageContainer.append(content_data);
 	
 }
@@ -107,8 +103,8 @@ function menus(){
  * create header
  */
 function create_header(type){
-	var common_header = '<header data-role="header" data-theme="b" data-fullscreen="true" data-tap-toggle="false"><h1><img src="images/logo.png" id="logo"/></h1></header>';
-	var page_header = '<header data-role="header" data-theme="b" data-fullscreen="true" data-tap-toggle="false"><a href="#"  onclick="back_page()" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-notext ui-btn-inline"></a><h1><img src="images/logo.png" id="logo"/></h1><a href="#" onclick="next_page()" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-notext ui-btn-inline"></a></header>';
+	var common_header = '<header data-role="header" data-theme="b" data-position="fixed" data-fullscreen="true" data-tap-toggle="false"><h1><img src="images/logo.png" id="logo"/></h1></header>';
+	var page_header = '<header data-role="header" data-theme="b" data-position="fixed" data-fullscreen="true" data-tap-toggle="false"><a href="#"  onclick="back_page()" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-notext ui-btn-inline"></a><h1><img src="images/logo.png" id="logo"/></h1><a href="#" onclick="next_page()" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-notext ui-btn-inline"></a></header>';
 	if(type == 'page_header'){
 		return page_header;
 	}
@@ -185,6 +181,15 @@ function close_app(){
 	navigator.app.exitApp();
 }
 
+
+
+/*
+ * ui content
+ */
+function ui_content(){
+	var d_height = $(window).height();
+	$('.my_content').height(d_height-83);
+}
 
 /* 
  * config local storage

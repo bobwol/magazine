@@ -44,7 +44,7 @@ h1{
 
 .bottom-space{
 	clear:both;
-	height: 30px;
+	height: 10px;
 }
 .loading-content{
 	margin-top : 50%;
@@ -58,5 +58,14 @@ h1{
 
 #logo{
 	max-height: 26px !important;
+}
+header{
+	height: 50px;
+}
+.ui-footer{
+	height: 34px;
+}
+.my_content{
+	margin-top: 50px;
 }
 

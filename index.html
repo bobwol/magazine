@@ -2,22 +2,23 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
     <title>Magazine :: w3-app</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=1">
+    
+    <!-- Add css -->
     <link href="css/jquery.mobile-1.4.0.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/app.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="js/jquery.js" ></script>
-    <script type="text/javascript" src="js/new_index.js"></script>
-    <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+   
     
 </head>
 
 <body>
 	
+	<!--Loading page-->
 	<div data-role="page" id="loading">
 		<header data-role="header" data-theme="b"><h1><img src="images/logo.png" id="logo"/></h1></header>
-		<div data-role="content">
+		<div data-role="content" class="my_content">
 			<div class="loading-content text-center">
 				<img src="css/images/ajax-loader.gif"/><br>
 				Loading 
@@ -26,9 +27,10 @@
 		</div>
 	</div>
 	
+	<!-- Error page -->
 	<div data-role="page" id="error">
 		<header data-role="header" data-theme="b"><h1><img src="images/logo.png" id="logo"/></h1></header>
-		<div data-role="content ">
+		<div data-role="content" class="my_content">
 			<div class='loading-content text-center'>
 				<i class="error-text">Network Error</i><br>
 				<a href="#" onclick="get_data()" data-role="button" data-inline="true" data-theme="b">Try again</a>
@@ -36,7 +38,11 @@
 		</div>
 	</div>
             
-        
-	
+    
+	<!-- Add scripts -->
+	<script type="text/javascript" src="js/jquery.js" ></script>
+    <script type="text/javascript" src="js/new_index.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 </body>
 </html>
