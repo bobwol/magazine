@@ -1,12 +1,7 @@
 $(document).on('mobileinit',function(){
+	set_viewport();
 	get_data();
-	$( window ).on( "swipeleft", function( event ) { 
-		back_page();
-	});
-
-	$( window ).on( "swiperight", function( event ) { 
-			next_page();
-	});
+	set_swipe_event();
 });
 
 $(document).on( "orientationchange", function( event ) {
@@ -33,6 +28,9 @@ $(document).on( "orientationchange", function( event ) {
 			//processing responsive image
 			$('.content-description img').addClass('ri');
 			ui_content();
+			
+		},
+		complete:function(msg){
 			$.mobile.changePage('#home');
 		},
 		error  : function(msg){
@@ -202,6 +200,22 @@ function ui_content(){
 	$('.my_content').height(d_height-83);
 }
 
+
+//set viewpost
+function set_viewport(){
+	$('<meta>', { name: 'viewport',content: 'width=device-width, minimum-scale=1, maximum-scale=4, user-scalable=yes'}).appendTo('head');
+}
+
+function set_swipe_event(){
+		$( window ).on( "swipeleft", function( event ) { 
+			back_page();
+		});
+
+		$( window ).on( "swiperight", function( event ) { 
+				next_page();
+		});
+	}
+	
 /* 
  * config local storage
  */
@@ -217,6 +231,8 @@ function getLocalStorage(fieldName) {
 	}
 	return JSON.parse(window.localStorage.getItem(fieldName));	
 }
+
+
 
 /*
  * json debug
