@@ -101,7 +101,7 @@ function menus(){
                '<div data-role="navbar" >'+
                 '<ul><li><a href="#home" data-transition="slideup" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home ui-btn-active">Home</a></li>'+
                     '<li><a href="#context" data-transition="slideup" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-grid">Index</a></li>'+
-                    '<li><a href="#popupLogin" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-power">Close</a></li>'+
+                    '<li><a href="javascript:void(0)" onclick="close_app()" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-power">Close</a></li>'+
                 '</ul>'+
             '</div></div>';
      return menu;
