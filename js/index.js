@@ -1,10 +1,18 @@
 $(document).on('mobileinit',function(){
 	get_data();
+	$( window ).on( "swipeleft", function( event ) { 
+		back_page();
+	});
+
+	$( window ).on( "swiperight", function( event ) { 
+			next_page();
+	});
 });
 
 $(document).on( "orientationchange", function( event ) {
 	//alert('test');
 });
+
 
 
 /*
@@ -116,11 +124,14 @@ function create_header(type){
  */
 function store_page_ids(data){
 	var pages = new Array();
+	pages[0] = '#home';
+	pages[1] = '#context';
 	$.each(data,function(){
 		pages.push("#page_"+this.id);
 		}
 	);
 	setLocalStorage('my_pages',pages);
+	//json_debug(getLocalStorage('my_pages'));
 }
 
 /*
