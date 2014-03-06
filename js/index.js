@@ -14,7 +14,7 @@ $(document).on( "orientationchange", function( event ) {
  * get data 
  */
  function get_data(){
- 	var url = 'http://magazine.w3-app.com/mobiles/magazine_paid.json';      
+ 	var url = 'http://mobile.gyanshikha.com/mobiles/magazine_paid.json';      
     $.ajax({
         url			: url ,
 		crossDomain : true,
@@ -50,7 +50,7 @@ function create_home(data){
 	var d_height = $(window).height();
 	var h_height = $('header').height();
 	var menu = menus();
-	var home_data = '<div data-role="page" id="home">'+create_header()+'<div data-role="content" class="home-content my_content"><img src="http://magazine.w3-app.com/img/magazine_covers/mobiles/'+data.id+'.png" class="home-baner ri"/></div>'+menu+'</div>';
+	var home_data = '<div data-role="page" id="home">'+create_header()+'<div data-role="content" class="home-content my_content"><img src="http://mobile.gyanshikha.com/img/magazine_covers/mobiles/'+data.id+'.png" class="home-baner ri"/></div>'+menu+'</div>';
 	$.mobile.pageContainer.append(home_data);
 	
 	$('.home-baner').css({'min-width':d_width,'min-height': d_height-87});
@@ -64,10 +64,10 @@ function create_magazine(data){
 		var top_add = '';
 		var bottom_add = '';
 		if(this.top_ad != 'none'){
-			top_add = '<div class="text-center"><img src="http://magazine.w3-app.com/img/ads/'+this.top_ad+'" class="ri" /></div>';
+			top_add = '<div class="text-center"><img src="http://mobile.gyanshikha.com/img/ads/'+this.top_ad+'" class="ri" /></div>';
 		}
 		if(this.bottom_ad != 'none'){
-			bottom_add = '<div class="text-center"><img src="http://magazine.w3-app.com/img/ads/'+this.bottom_ad+'" class="ri" /></div>';
+			bottom_add = '<div class="text-center"><img src="http://mobile.gyanshikha.com/img/ads/'+this.bottom_ad+'" class="ri" /></div>';
 		}
 		var content_data = '<div data-role="page" id="page_'+this.id+'">'+create_header('page_header')+'<div data-role="content" class="my_content"><div class="content-wrapper "><div class="title-wrapper" ><h1>'+this.title+'</h1></div><div class="content-description">'+top_add+this.description+'<div class="clearfix"></div>'+bottom_add+'</div><div class="clearfix"></div></div><div class="bottom-space"> </div></div>'+menu+'</div>'
 		$.mobile.pageContainer.append(content_data);
