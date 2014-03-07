@@ -14,7 +14,7 @@
         Provide magazine service from web layer
     </description>
 
-    <author href="https://www.w3-app.com" email="info@nogosolutions.com">
+    <author href="https://www.w3-app.com" email="zubayer177@gmail.com">
         Abdullah Al Zubayer
     </author>
     
@@ -23,7 +23,7 @@
    
     
     <!-- Access -->
-    <access origin="http://magazine.w3-app.com" subdomains="true" />
+    <access origin="http://mobile.gyanshikha.com" subdomains="true" />
     
     <!-- Permissions -->
 
