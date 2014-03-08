@@ -36,7 +36,7 @@ $(document).on( "orientationchange", function( event ) {
 		error  : function(msg){
 			$.mobile.changePage('#error',{transition:"turn"});
 		},
-		timeout : 10000
+		timeout : 60000
        
 		
     });         
