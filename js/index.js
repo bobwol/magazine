@@ -13,14 +13,15 @@ $(document).on( "orientationchange", function( event ) {
 /*
  * get data 
  */
- function get_data(){
- 	var url = 'http://mobile.gyanshikha.com/mobiles/magazine_paid.json';      
-    $.ajax({
-        url			: url ,
+
+function get_data(){
+ 	var url = 'http://mobile.gyanshikha.com/mobiles/magazine_paid.json';
+ 	$.ajax({
+		url		: url,
 		crossDomain : true,
-        dataType	: "jsonp",
+		dataType	: "jsonp",
 		beforeSend: loading(),
-        success	: function(msg){
+		success	: function(msg){
 			store_page_ids(msg.Content);
 			create_home(msg.Magazine);
 			create_context(msg.Content);
@@ -36,10 +37,9 @@ $(document).on( "orientationchange", function( event ) {
 		error  : function(msg){
 			$.mobile.changePage('#error',{transition:"turn"});
 		},
-		timeout : 180000
+		timeout : 50000
        
-		
-    });         
+	});
  }
 
 /*
