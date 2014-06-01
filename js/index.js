@@ -15,7 +15,7 @@ $(document).on( "orientationchange", function( event ) {
  */
 
 function get_data(){
- 	var url = 'http://mobile.gyanshikha.com/mobiles/magazine_paid.json';
+ 	var url = 'http://mobile.gyanshikha.com/mobiles/magazine_free.json';
  	$.ajax({
 		url		: url,
 		crossDomain : true,
