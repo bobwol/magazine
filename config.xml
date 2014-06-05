@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.w3-app.gyanshikha"
+        id          = "com.w3-app.gyanshikha_free"
         versionCode = "10" 
         version     = "1.0.0" >
 
@@ -11,7 +11,7 @@
     <name>জ্ঞানশিখা</name>
 
     <description>
-        Provide magazine service from web layer
+       The first bengali children magazine app.
     </description>
 
     <author href="https://www.w3-app.com" email="zubayer177@gmail.com">
